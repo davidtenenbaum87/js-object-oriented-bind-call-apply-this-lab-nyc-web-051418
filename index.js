@@ -8,11 +8,7 @@ function setThisWithCall(fn, thisValue, arg) {
 }
 
 function setThisWithApply(fn, thisValue, args) {
-  const argArr = [];
-  args.forEach(function (arg) {
-    argArr.push(arg);
-  })
-  return fn.apply(thisValue, argArr);
+  return fn.apply(thisValue, args);
 }
 
 function returnNewFunctionOf(functionToBeCopied, thisValue) {
